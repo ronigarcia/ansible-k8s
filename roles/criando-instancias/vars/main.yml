@@ -1,9 +1,0 @@
----
-# vars file for criando-instancias
-instance_type: t2.micro
-sec_group_name: giropops
-image: ami-0400a1104d5b9caa1
-keypair: curso-terraform
-region: us-east-1
-count: 3
-profile: default
