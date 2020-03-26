@@ -1,2 +1,6 @@
 ---
 # vars file for install-helm
+
+url_helm: "https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3"
+
+url_repo_helm: "https://kubernetes-charts.storage.googleapis.com/"
