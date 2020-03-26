@@ -5,7 +5,8 @@
 
 - name: Inicializando o cluster k8s
   command:
-    register: kubeadm_init
+    kubeadm init
+  register: kubeadm_init
 
 - name: Criando o diretorio .kube
   file:

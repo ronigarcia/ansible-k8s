@@ -1,0 +1,10 @@
+- name: Instalando o Helm3
+  shell: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+- name: Adicionando repo do HELM
+  command:
+    helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+
+- name: Atualizando repo HELM
+  command:
+    helm repo update
