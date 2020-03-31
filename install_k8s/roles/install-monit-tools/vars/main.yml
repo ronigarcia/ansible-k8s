@@ -1,0 +1,3 @@
+---
+# vars file for install-monit-tools
+deploy_prometheus: "--set prometheusOperator.createCustomResource=false meu-querido-prometheus stable/prometheus-operator"

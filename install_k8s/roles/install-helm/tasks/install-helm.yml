@@ -4,8 +4,10 @@
 - name: Adicionando repo do HELM
   command:
     helm repo add stable {{ url_repo_helm }}
+  register: helm_add_repo
 
 - name: Atualizando repo HELM
   command:
     helm repo update
+  register: helm_repo_update
     
