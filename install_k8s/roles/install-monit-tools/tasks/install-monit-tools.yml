@@ -1,0 +1,3 @@
+- name:  Instalando o Prometheus Operator
+  shell: helm install {{ deploy_prometheus }}
+  register: prometheus_install
