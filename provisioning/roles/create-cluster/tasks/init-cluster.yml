@@ -1,0 +1,42 @@
+- name: Removendo cluster antigo
+  command:
+    kubeadm reset --force
+  register: kubeadm_reset
+
+- name: Inicializando o cluster k8s
+  command:
+    kubeadm init
+  register: kubeadm_init
+
+- name: Criando o diretorio .kube
+  file:
+    path: ~/.kube
+    state: directory
+
+- name: Linkando o arquivo admin.conf para o ~/.kube/config
+  file:
+    src: /etc/kubernetes/admin.conf
+    dest: ~/.kube/config
+    state: link
+
+- name: Download YAML Weavenet
+  get_url: 
+    url: "{{ default_url_weavenet }}"
+    dest: /tmp/weavenet.yml
+    mode: 0775
+
+- name: Configurando Weavenet
+  k8s_raw:
+   state: present
+   src: /tmp/weavenet.yml
+  register: weavenet_result
+
+- name: Pegando o token para adicionar os workers no cluster
+  shell: kubeadm token create --print-join-command
+  register: k8s_token
+
+- name: Copy join command to local file
+  delegate_to: localhost
+  copy:
+    content: "{{ k8s_token.stdout_lines[0] }}" 
+    dest: ./k8s_token.sh

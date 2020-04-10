@@ -5,7 +5,7 @@
     mode: 0775
 
 - name: Instalando o Docker
-  script: /tmp/docker.sh
+  command: /tmp/docker.sh
   notify: Restart Docker
 
 - name:  Adicionando as chaves do repo apt do k8S
@@ -28,3 +28,9 @@
     name:
       - openshift
       - PyYAML
+      - boto3
+      - pyhelm
+
+- name: Alterando hostname
+  hostname:
+    name: "{{ inventory_hostname }}"
