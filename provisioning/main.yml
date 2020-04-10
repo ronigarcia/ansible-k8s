@@ -1,6 +1,6 @@
 - hosts: local
   roles:
-  - criando-instancias 
+  - create-instance 
 
 - hosts: k8s-workers, k8s-master
   become: yes

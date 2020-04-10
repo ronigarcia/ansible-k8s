@@ -29,7 +29,6 @@
       - openshift
       - PyYAML
       - boto3
-      - pyhelm
 
 - name: Alterando hostname
   hostname:
