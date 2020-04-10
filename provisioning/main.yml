@@ -1,3 +1,15 @@
 - hosts: local
   roles:
   - criando-instancias 
+
+- hosts: k8s-workers, k8s-master
+  become: yes
+  user: ubuntu
+  gather_facts: no
+  pre_tasks:
+  - name: 'Atualizando o repo'
+    raw: 'apt-get update'
+  - name: 'Instalando o Python'
+    raw: 'apt-get install -y python'
+  roles:
+  - { role: install-k8s, tags: ["install_k8s_role"] }

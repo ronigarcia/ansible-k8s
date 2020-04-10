@@ -1,0 +1,8 @@
+---
+# vars file for install-k8s
+
+packages:
+    - kubelet
+    - kubeadm
+    - kubectl
+    - python-pip

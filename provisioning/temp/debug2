@@ -1,0 +1,313 @@
+ok: [localhost] => {
+    "msg": {
+        "changed": true,
+        "msg": "All items completed",
+        "results": [
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-0d4d3257c66b78112"
+                ],
+                "instances": [
+                    {
+                        "ami_launch_index": "0",
+                        "architecture": "x86_64",
+                        "block_device_mapping": {
+                            "/dev/sda1": {
+                                "delete_on_termination": true,
+                                "status": "attached",
+                                "volume_id": "vol-02d8ba0e23801f078"
+                            }
+                        },
+                        "dns_name": "ec2-3-92-203-127.compute-1.amazonaws.com",
+                        "ebs_optimized": false,
+                        "groups": {
+                            "sg-02f33c1e43e5936a1": "giropops"
+                        },
+                        "hypervisor": "xen",
+                        "id": "i-0d4d3257c66b78112",
+                        "image_id": "ami-07ebfd5b3428b6f4d",
+                        "instance_type": "t2.micro",
+                        "kernel": null,
+                        "key_name": "roni-key",
+                        "launch_time": "2020-04-09T00:02:43.000Z",
+                        "placement": "us-east-1b",
+                        "private_dns_name": "ip-172-31-87-182.ec2.internal",
+                        "private_ip": "172.31.87.182",
+                        "public_dns_name": "ec2-3-92-203-127.compute-1.amazonaws.com",
+                        "public_ip": "3.92.203.127",
+                        "ramdisk": null,
+                        "region": "us-east-1",
+                        "root_device_name": "/dev/sda1",
+                        "root_device_type": "ebs",
+                        "state": "running",
+                        "state_code": 16,
+                        "tags": {},
+                        "tenancy": "default",
+                        "virtualization_type": "hvm"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "assign_public_ip": null,
+                        "aws_access_key": null,
+                        "aws_secret_key": null,
+                        "count": 1,
+                        "count_tag": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "ebs_optimized": false,
+                        "ec2_url": null,
+                        "exact_count": null,
+                        "group": [
+                            "giropops"
+                        ],
+                        "group_id": null,
+                        "id": null,
+                        "image": "ami-07ebfd5b3428b6f4d",
+                        "instance_ids": null,
+                        "instance_initiated_shutdown_behavior": "stop",
+                        "instance_profile_name": null,
+                        "instance_tags": null,
+                        "instance_type": "t2.micro",
+                        "kernel": null,
+                        "key_name": "roni-key",
+                        "keypair": "roni-key",
+                        "monitoring": false,
+                        "network_interfaces": null,
+                        "placement_group": null,
+                        "private_ip": null,
+                        "profile": "teste",
+                        "ramdisk": null,
+                        "region": "us-east-1",
+                        "security_token": null,
+                        "source_dest_check": null,
+                        "spot_launch_group": null,
+                        "spot_price": null,
+                        "spot_type": "one-time",
+                        "spot_wait_timeout": 600,
+                        "state": "present",
+                        "tenancy": "default",
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": true,
+                        "wait_timeout": 300,
+                        "zone": null
+                    }
+                },
+                "item": {
+                    "name": "Ansible-1",
+                    "node": "Master"
+                },
+                "tagged_instances": []
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-0b1ad436a8c36af04"
+                ],
+                "instances": [
+                    {
+                        "ami_launch_index": "0",
+                        "architecture": "x86_64",
+                        "block_device_mapping": {
+                            "/dev/sda1": {
+                                "delete_on_termination": true,
+                                "status": "attached",
+                                "volume_id": "vol-0884b94f5abb0015b"
+                            }
+                        },
+                        "dns_name": "ec2-54-152-1-221.compute-1.amazonaws.com",
+                        "ebs_optimized": false,
+                        "groups": {
+                            "sg-02f33c1e43e5936a1": "giropops"
+                        },
+                        "hypervisor": "xen",
+                        "id": "i-0b1ad436a8c36af04",
+                        "image_id": "ami-07ebfd5b3428b6f4d",
+                        "instance_type": "t2.micro",
+                        "kernel": null,
+                        "key_name": "roni-key",
+                        "launch_time": "2020-04-09T00:03:13.000Z",
+                        "placement": "us-east-1b",
+                        "private_dns_name": "ip-172-31-93-253.ec2.internal",
+                        "private_ip": "172.31.93.253",
+                        "public_dns_name": "ec2-54-152-1-221.compute-1.amazonaws.com",
+                        "public_ip": "54.152.1.221",
+                        "ramdisk": null,
+                        "region": "us-east-1",
+                        "root_device_name": "/dev/sda1",
+                        "root_device_type": "ebs",
+                        "state": "running",
+                        "state_code": 16,
+                        "tags": {},
+                        "tenancy": "default",
+                        "virtualization_type": "hvm"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "assign_public_ip": null,
+                        "aws_access_key": null,
+                        "aws_secret_key": null,
+                        "count": 1,
+                        "count_tag": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "ebs_optimized": false,
+                        "ec2_url": null,
+                        "exact_count": null,
+                        "group": [
+                            "giropops"
+                        ],
+                        "group_id": null,
+                        "id": null,
+                        "image": "ami-07ebfd5b3428b6f4d",
+                        "instance_ids": null,
+                        "instance_initiated_shutdown_behavior": "stop",
+                        "instance_profile_name": null,
+                        "instance_tags": null,
+                        "instance_type": "t2.micro",
+                        "kernel": null,
+                        "key_name": "roni-key",
+                        "keypair": "roni-key",
+                        "monitoring": false,
+                        "network_interfaces": null,
+                        "placement_group": null,
+                        "private_ip": null,
+                        "profile": "teste",
+                        "ramdisk": null,
+                        "region": "us-east-1",
+                        "security_token": null,
+                        "source_dest_check": null,
+                        "spot_launch_group": null,
+                        "spot_price": null,
+                        "spot_type": "one-time",
+                        "spot_wait_timeout": 600,
+                        "state": "present",
+                        "tenancy": "default",
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": true,
+                        "wait_timeout": 300,
+                        "zone": null
+                    }
+                },
+                "item": {
+                    "name": "Ansible-2",
+                    "node": "Worker"
+                },
+                "tagged_instances": []
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-0c1d6b5112c972056"
+                ],
+                "instances": [
+                    {
+                        "ami_launch_index": "0",
+                        "architecture": "x86_64",
+                        "block_device_mapping": {
+                            "/dev/sda1": {
+                                "delete_on_termination": true,
+                                "status": "attached",
+                                "volume_id": "vol-0be4757598fe26c42"
+                            }
+                        },
+                        "dns_name": "ec2-18-207-244-186.compute-1.amazonaws.com",
+                        "ebs_optimized": false,
+                        "groups": {
+                            "sg-02f33c1e43e5936a1": "giropops"
+                        },
+                        "hypervisor": "xen",
+                        "id": "i-0c1d6b5112c972056",
+                        "image_id": "ami-07ebfd5b3428b6f4d",
+                        "instance_type": "t2.micro",
+                        "kernel": null,
+                        "key_name": "roni-key",
+                        "launch_time": "2020-04-09T00:03:48.000Z",
+                        "placement": "us-east-1b",
+                        "private_dns_name": "ip-172-31-82-16.ec2.internal",
+                        "private_ip": "172.31.82.16",
+                        "public_dns_name": "ec2-18-207-244-186.compute-1.amazonaws.com",
+                        "public_ip": "18.207.244.186",
+                        "ramdisk": null,
+                        "region": "us-east-1",
+                        "root_device_name": "/dev/sda1",
+                        "root_device_type": "ebs",
+                        "state": "running",
+                        "state_code": 16,
+                        "tags": {},
+                        "tenancy": "default",
+                        "virtualization_type": "hvm"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "assign_public_ip": null,
+                        "aws_access_key": null,
+                        "aws_secret_key": null,
+                        "count": 1,
+                        "count_tag": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "ebs_optimized": false,
+                        "ec2_url": null,
+                        "exact_count": null,
+                        "group": [
+                            "giropops"
+                        ],
+                        "group_id": null,
+                        "id": null,
+                        "image": "ami-07ebfd5b3428b6f4d",
+                        "instance_ids": null,
+                        "instance_initiated_shutdown_behavior": "stop",
+                        "instance_profile_name": null,
+                        "instance_tags": null,
+                        "instance_type": "t2.micro",
+                        "kernel": null,
+                        "key_name": "roni-key",
+                        "keypair": "roni-key",
+                        "monitoring": false,
+                        "network_interfaces": null,
+                        "placement_group": null,
+                        "private_ip": null,
+                        "profile": "teste",
+                        "ramdisk": null,
+                        "region": "us-east-1",
+                        "security_token": null,
+                        "source_dest_check": null,
+                        "spot_launch_group": null,
+                        "spot_price": null,
+                        "spot_type": "one-time",
+                        "spot_wait_timeout": 600,
+                        "state": "present",
+                        "tenancy": "default",
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": true,
+                        "wait_timeout": 300,
+                        "zone": null
+                    }
+                },
+                "item": {
+                    "name": "Criando a instancia EC2"
+                },
+                "tagged_instances": []
+            }
+        ]
+    }
+}

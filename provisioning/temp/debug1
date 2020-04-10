@@ -1,0 +1,226 @@
+ok: [localhost] => {
+    "msg": {
+        "changed": false,
+        "msg": "All items completed",
+        "results": [
+            {
+                "ansible_loop_var": "item",
+                "changed": false,
+                "failed": false,
+                "instance_ids": null,
+                "instances": [],
+                "invocation": {
+                    "module_args": {
+                        "assign_public_ip": null,
+                        "aws_access_key": null,
+                        "aws_secret_key": null,
+                        "count": 1,
+                        "count_tag": {
+                            "Name": "Ansible-1",
+                            "Node": "Master"
+                        },
+                        "debug_botocore_endpoint_logs": false,
+                        "ebs_optimized": false,
+                        "ec2_url": null,
+                        "exact_count": 1,
+                        "group": [
+                            "giropops"
+                        ],
+                        "group_id": null,
+                        "id": null,
+                        "image": "ami-07ebfd5b3428b6f4d",
+                        "instance_ids": null,
+                        "instance_initiated_shutdown_behavior": "stop",
+                        "instance_profile_name": null,
+                        "instance_tags": {
+                            "Name": "Ansible-1",
+                            "Node": "Master"
+                        },
+                        "instance_type": "t2.medium",
+                        "kernel": null,
+                        "key_name": "roni-key",
+                        "keypair": "roni-key",
+                        "monitoring": false,
+                        "network_interfaces": null,
+                        "placement_group": null,
+                        "private_ip": null,
+                        "profile": "teste",
+                        "ramdisk": null,
+                        "region": "us-east-1",
+                        "security_token": null,
+                        "source_dest_check": null,
+                        "spot_launch_group": null,
+                        "spot_price": null,
+                        "spot_type": "one-time",
+                        "spot_wait_timeout": 600,
+                        "state": "present",
+                        "tenancy": "default",
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": true,
+                        "wait_timeout": 300,
+                        "zone": null
+                    }
+                },
+                "item": {
+                    "name": "Ansible-1",
+                    "node": "Master"
+                },
+                "tagged_instances": [
+                    {
+                        "ami_launch_index": "0",
+                        "architecture": "x86_64",
+                        "block_device_mapping": {
+                            "/dev/sda1": {
+                                "delete_on_termination": true,
+                                "status": "attached",
+                                "volume_id": "vol-046a34167bd2f95b0"
+                            }
+                        },
+                        "dns_name": "ec2-35-173-228-204.compute-1.amazonaws.com",
+                        "ebs_optimized": false,
+                        "groups": {
+                            "sg-02f33c1e43e5936a1": "giropops"
+                        },
+                        "hypervisor": "xen",
+                        "id": "i-0689ffd7e53ef1bb8",
+                        "image_id": "ami-07ebfd5b3428b6f4d",
+                        "instance_type": "t2.medium",
+                        "kernel": null,
+                        "key_name": "roni-key",
+                        "launch_time": "2020-04-08T23:03:04.000Z",
+                        "placement": "us-east-1d",
+                        "private_dns_name": "ip-172-31-47-228.ec2.internal",
+                        "private_ip": "172.31.47.228",
+                        "public_dns_name": "ec2-35-173-228-204.compute-1.amazonaws.com",
+                        "public_ip": "35.173.228.204",
+                        "ramdisk": null,
+                        "region": "us-east-1",
+                        "root_device_name": "/dev/sda1",
+                        "root_device_type": "ebs",
+                        "state": "running",
+                        "state_code": 16,
+                        "tags": {
+                            "Name": "Ansible-1",
+                            "Node": "Master"
+                        },
+                        "tenancy": "default",
+                        "virtualization_type": "hvm"
+                    }
+                ]
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": false,
+                "failed": false,
+                "instance_ids": null,
+                "instances": [],
+                "invocation": {
+                    "module_args": {
+                        "assign_public_ip": null,
+                        "aws_access_key": null,
+                        "aws_secret_key": null,
+                        "count": 1,
+                        "count_tag": {
+                            "Name": "Ansible-2",
+                            "Node": "Worker"
+                        },
+                        "debug_botocore_endpoint_logs": false,
+                        "ebs_optimized": false,
+                        "ec2_url": null,
+                        "exact_count": 1,
+                        "group": [
+                            "giropops"
+                        ],
+                        "group_id": null,
+                        "id": null,
+                        "image": "ami-07ebfd5b3428b6f4d",
+                        "instance_ids": null,
+                        "instance_initiated_shutdown_behavior": "stop",
+                        "instance_profile_name": null,
+                        "instance_tags": {
+                            "Name": "Ansible-2",
+                            "Node": "Worker"
+                        },
+                        "instance_type": "t2.medium",
+                        "kernel": null,
+                        "key_name": "roni-key",
+                        "keypair": "roni-key",
+                        "monitoring": false,
+                        "network_interfaces": null,
+                        "placement_group": null,
+                        "private_ip": null,
+                        "profile": "teste",
+                        "ramdisk": null,
+                        "region": "us-east-1",
+                        "security_token": null,
+                        "source_dest_check": null,
+                        "spot_launch_group": null,
+                        "spot_price": null,
+                        "spot_type": "one-time",
+                        "spot_wait_timeout": 600,
+                        "state": "present",
+                        "tenancy": "default",
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": true,
+                        "wait_timeout": 300,
+                        "zone": null
+                    }
+                },
+                "item": {
+                    "name": "Ansible-2",
+                    "node": "Worker"
+                },
+                "tagged_instances": [
+                    {
+                        "ami_launch_index": "0",
+                        "architecture": "x86_64",
+                        "block_device_mapping": {
+                            "/dev/sda1": {
+                                "delete_on_termination": true,
+                                "status": "attached",
+                                "volume_id": "vol-0b8cb364b541a4106"
+                            }
+                        },
+                        "dns_name": "ec2-3-90-138-60.compute-1.amazonaws.com",
+                        "ebs_optimized": false,
+                        "groups": {
+                            "sg-02f33c1e43e5936a1": "giropops"
+                        },
+                        "hypervisor": "xen",
+                        "id": "i-0e0424e3298c1f311",
+                        "image_id": "ami-07ebfd5b3428b6f4d",
+                        "instance_type": "t2.medium",
+                        "kernel": null,
+                        "key_name": "roni-key",
+                        "launch_time": "2020-04-08T23:03:41.000Z",
+                        "placement": "us-east-1d",
+                        "private_dns_name": "ip-172-31-45-72.ec2.internal",
+                        "private_ip": "172.31.45.72",
+                        "public_dns_name": "ec2-3-90-138-60.compute-1.amazonaws.com",
+                        "public_ip": "3.90.138.60",
+                        "ramdisk": null,
+                        "region": "us-east-1",
+                        "root_device_name": "/dev/sda1",
+                        "root_device_type": "ebs",
+                        "state": "running",
+                        "state_code": 16,
+                        "tags": {
+                            "Name": "Ansible-2",
+                            "Node": "Worker"
+                        },
+                        "tenancy": "default",
+                        "virtualization_type": "hvm"
+                    }
+                ]
+            }
+        ]
+    }
+}

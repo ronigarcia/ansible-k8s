@@ -1,5 +1,11 @@
+- name: Download script o Docker
+  get_url: 
+    url: https://get.docker.com
+    dest: /tmp/docker.sh
+    mode: 0775
+
 - name: Instalando o Docker
-  shell: curl -fsSL https://get.docker.com | bash
+  script: /tmp/docker.sh
   notify: Restart Docker
 
 - name:  Adicionando as chaves do repo apt do k8S
@@ -14,10 +20,11 @@
 
 - name: Instalando os pacotes kubadm, kublet e kubectl
   apt:
-    name: "{{ packages }}"
-  vars:
-    packages:
-    - kubelet
-    - kubeadm
-    - kubectl
+    name: "{{ packages }}" 
   notify: Restart Kubelet
+
+- name: Instalando dependencias do modulo k8s
+  pip:
+    name:
+      - openshift
+      - PyYAML
