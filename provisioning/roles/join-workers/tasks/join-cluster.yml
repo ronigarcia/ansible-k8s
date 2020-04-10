@@ -1,0 +1,7 @@
+- name: Removendo o cluster
+  command:
+    kubeadm reset --force
+  register: kubeadm_reset
+
+- name: Adicionando o worker ao cluster k8s
+  script: ./k8s_token.sh

@@ -1,14 +1,3 @@
-- name: Instalando o pip
-  apt: 
-    name:
-      - python-pip
-
-- name: Instalando dependencias do modulo k8s
-  pip:
-    name:
-      - openshift
-      - PyYAML
-
 - name: Copiando o arquivo de deployment da app v1
   template:
     src: app-v1.yml.j2

@@ -1,0 +1,35 @@
+- name: Download script o Docker
+  get_url: 
+    url: https://get.docker.com
+    dest: /tmp/docker.sh
+    mode: 0775
+
+- name: Instalando o Docker
+  command: /tmp/docker.sh
+  notify: Restart Docker
+
+- name:  Adicionando as chaves do repo apt do k8S
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Adicionando o repo do K8S
+  apt_repository:
+    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+
+- name: Instalando os pacotes kubadm, kublet e kubectl
+  apt:
+    name: "{{ packages }}" 
+  notify: Restart Kubelet
+
+- name: Instalando dependencias do modulo k8s
+  pip:
+    name:
+      - openshift
+      - PyYAML
+      - boto3
+
+- name: Alterando hostname
+  hostname:
+    name: "{{ inventory_hostname }}"

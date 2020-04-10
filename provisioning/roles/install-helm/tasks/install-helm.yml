@@ -1,0 +1,9 @@
+- name: Instalando o Helm3
+  get_url: 
+    url: "{{ url_helm }}"
+    dest: /tmp/helm.sh
+    mode: 0775
+
+- name: Instalando o Helm3
+  shell: bash -x /tmp/helm.sh
+    
